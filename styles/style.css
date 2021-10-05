@@ -10,8 +10,27 @@ body {
     font-size: 1em;
 }
 
+section {
+    padding: 0 10rem 0 10rem;
+}
+
 a {
     text-decoration: none;
+}
+
+/* Top btn */
+#topBtn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 998;
+    border: none;
+    outline: none;
+    background: #25167A;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
 }
 
 /* Header */
@@ -20,6 +39,12 @@ header {
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
     display: flex;
     padding: 0 10rem 0 10rem;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    z-index: 999;
+    top: 0;
+    background: #fff;
 }
 
 /* Logo */
@@ -50,6 +75,11 @@ nav ul {
 
 nav ul li {
     margin: 0 10px;
+    transition: 200ms;
+}
+
+nav ul li:hover {
+    transform: translateY(-4px);
 }
 
 nav ul li a {
@@ -81,4 +111,56 @@ nav ul li:nth-child(6) a:before {
 nav ul li a.active {
     font-weight: bold;
     border-bottom: 1px solid #25167A;
+}
+
+/* Banner */
+.banner { 
+    background-image: url('../assets/images/banner-wave.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin-top: 55px;
+    line-height: 1.6;
+}
+
+.banner h1, h2 {
+    color: #fff;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.2),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.banner h1 {
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+
+.banner h2 {
+    font-size: 1.3rem;
+}
+
+/* Banner inner */
+.banner-inner {
+    position: relative;
+    top: 50px;
+}
+
+.banner-btns {
+    position: relative;
+    top: 30px;
+}
+
+.banner-btns a {
+    color: #fff; 
+    padding: 8px 11px;
+    border-radius: 20px;
+}  
+
+.banner-btns a:nth-child(1) {
+    background: #E1DEF4;
+    color: #25167A;
+    margin-right: 10px;
+}
+
+.banner-btns a:nth-child(2) {
+    background: #25167A;
 }
