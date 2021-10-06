@@ -21,6 +21,7 @@
 - Camelcasing toepassen
 - Comments plaatsen
 - Duidelijke class namen
+- Goede leesbaarheid hanteren
 
 ## Kenmerken
 
