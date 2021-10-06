@@ -16,6 +16,12 @@
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
+## Code afspraken
+
+- Camelcasing toepassen
+- Comments plaatsen
+- Duidelijke class namen
+
 ## Kenmerken
 
 ## Installatie
