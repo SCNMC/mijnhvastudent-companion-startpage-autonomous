@@ -78,10 +78,6 @@ nav ul li {
     transition: 200ms;
 }
 
-nav ul li:hover {
-    transform: translateY(-4px);
-}
-
 nav ul li a {
     color: var(--primary-color);
     font-size: 0.875em;
@@ -158,18 +154,19 @@ nav ul li a.active {
 .banner-btns a {
     padding: 8px 11px;
     border-radius: 20px;
-    transition: top .3s;
+    transition: 200ms;
+    top: 0;
+    position: relative;
 }  
 
 .banner-btns a:nth-child(1) {
     background: var(--secondary-bg);
     color: var(--primary-color);
     margin-right: 10px;
-    position: relative;
 }
 
-.banner-btns a:nth-child(1):hover {
-    top: -10px;
+.banner-btns a:hover {
+    top: -5px;
 }
 
 .banner-btns a:nth-child(2) {
