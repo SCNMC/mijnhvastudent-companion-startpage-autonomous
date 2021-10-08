@@ -22,11 +22,27 @@ body {
 }
 
 section {
-    padding: 0 10rem 0 10rem;
+    padding: 0 0em 0 2rem;
+}
+
+/* Section title */
+section h3 {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+    font-size: 1.2rem;  
 }
 
 a {
     text-decoration: none;
+}
+
+/* Seperator line */
+.seperator {
+    width: 60px;
+    height: 2px;
+    background: var(--secondary-bg);
+    display: block;
 }
 
 /*--------------------------------------------------------------
@@ -36,7 +52,6 @@ header {
     height: 55px;
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
     display: flex;
-    padding: 0 10rem 0 10rem;
     position: fixed;
     width: 100%;
     background: transparent;
@@ -49,6 +64,8 @@ header {
 .logo-wrapper {
     align-items: center;
     display: flex;
+    left: 25px;
+    position: relative;
 }
 
 .logo-wrapper svg {
@@ -65,6 +82,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 nav ul {
@@ -109,6 +127,55 @@ nav ul li a.active {
     border-bottom: 1px solid #25167A;
 }
 
+
+/*--------------------------------------------------------------
+# Hamburger icon
+--------------------------------------------------------------*/
+.hamburger {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s;
+    position: absolute;   
+    top: 10px;
+    right: 20px;
+}
+
+.hamburger:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid var(--primary-color);
+    transform: scale(0);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+/* Hamburger bars */
+.hamburger div {
+    position: relative;
+    height: 4px;
+    margin: 8px 0;
+    background: var(--primary-color);
+    border-radius: 999px;
+    transform-origin: 50% 50%;
+    transition: 0.25s;
+}
+
+.hamburger div:nth-child(2) {
+    margin-left: 10px;
+    transition: 0.25s;
+}
+
+.hamburger div:nth-child(3) {
+    margin-left: 20px;
+    transition: 0.25s;
+}
+
 /*--------------------------------------------------------------
 # Banner Section
 --------------------------------------------------------------*/
@@ -123,7 +190,7 @@ nav ul li a.active {
 /* Banner inner */
 .banner-inner {
     position: relative;
-    top: 50px;
+    top: 30px;
 }
 
 /* Banner titles */
@@ -255,4 +322,178 @@ nav ul li a.active {
 .info-tabs article p {
     color: #647482;
     font-size: .93rem;
+}
+
+/*--------------------------------------------------------------
+# Useful Information Section
+--------------------------------------------------------------*/
+.useful-information {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px; 
+    padding: 1rem 1rem;
+}
+
+.useful-information article {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+}
+
+.useful-information article h4 {
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+}
+
+.useful-information article hr {
+    border: 0;
+    height: 1px;
+    background: #C0C0C0;
+}
+
+/* Useful information links */
+.useful-information ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.useful-information ul li {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.useful-information ul li:before {
+    content: '';
+    background: url('../assets/images/chevron-right.svg');
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+.useful-information ul li a {
+    color: #25167A;
+}
+
+/*--------------------------------------------------------------
+# Instructions
+--------------------------------------------------------------*/
+.instructions {
+    padding: 1rem 1rem;
+    display: grid;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* Instruction item */
+.instructions article {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    width: 80vw;
+    margin-right: 15px;
+    position: relative;
+}
+
+/* Instruction image */
+.instructions article img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Instruction content */
+.instruction-content {
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+/* Instruction title */
+.instructions article h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: .75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Instruction description */
+.instructions article p {
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+/* Read more btn */
+.instructions article a {
+    background: var(--secondary-bg);
+    color: var(--primary-color);
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Media Querys
+--------------------------------------------------------------*/
+
+/* Medium devices */
+@media (min-width: 40rem) {
+
+    /* Two columns */
+    .useful-information {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*--------------------------------------------------------------
+    # Instructions
+    --------------------------------------------------------------*/
+    .instructions article {
+        width: 40vw;
+    }
+}
+
+/* Large devices */
+@media (min-width: 60rem) {
+    
+    /* Three columns */
+    section { 
+        padding: 0 10rem 0 10rem;
+    }
+
+    /*--------------------------------------------------------------
+    # Header
+    --------------------------------------------------------------*/
+
+    /* Nav menu */
+    nav {
+        display: flex;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: none;
+    }
+
+    /*--------------------------------------------------------------
+    # Useful information
+    --------------------------------------------------------------*/
+
+    .useful-information {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .useful-information article {
+        grid-row: 2;
+    }
+
+    /*--------------------------------------------------------------
+    # Instructions
+    --------------------------------------------------------------*/
+    .instructions article {
+        width: 20vw;
+    }
 }
