@@ -1,70 +1,53 @@
-#footer-main{
-    background-color: #d9d9d9;
-    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
-    
-    padding: 60px;
-   
+#footer-main {
+  background-color: #d9d9d9;
+  background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+
+  padding: 60px;
 }
 
-.footer-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: auto;
-    grid-gap: 10px;
-    margin: 0 auto;
-    max-width: 100%;
-    padding-left: 180px;
-    
-    
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 180px;
 }
-#footer-main p:hover{
-    text-decoration: underline;
-    transition: 0.5s;
-    
+#footer-main p:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-.footer-grid h3{
-    color: #667;
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+.footer-grid h3 {
+  color: #667;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-.fa{
-    
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    color: #25167a;
-    background-color: #fff;
+.social {
+  text-align: center;
+  text-decoration: none;
+  margin: 1px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  gap: 12px;
+  margin-left: 6em;
 }
-.fa-facebook:hover {
-    background-color: #3d5b99;
-    color: white;
+img {
+  width: 32px;
 }
-.fa-twitter:hover {
-    background-color: #00aced;
-    color: white;
+.linkedin {
+  width: 39px;
 }
-.fa-linkedin:hover {
-    background-color: #0073a4;
-    color: white;
-}
-.fa-youtube:hover {
-    background-color: #e64a41;
-    color: white;
-}
-.fa-instagram:hover{
-    background-color: rgb(59, 92, 201);
-    color: white;
-}
+
 
 @media (max-width: 1024px) {
-    .footer-grid {
-      padding-left: 20px;
-    }
+  .footer-grid {
+    padding-left: 20px;
   }
+}
