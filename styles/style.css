@@ -22,7 +22,7 @@ body {
 }
 
 section {
-    padding: 0 0em 0 2rem;
+    padding: 0 0 0 2rem;
 }
 
 /* Section title */
@@ -349,7 +349,7 @@ nav ul li a.active {
 .useful-information article hr {
     border: 0;
     height: 1px;
-    background: #C0C0C0;
+    background: var(--secondary-bg);
 }
 
 /* Useful information links */
@@ -382,11 +382,21 @@ nav ul li a.active {
 # Instructions
 --------------------------------------------------------------*/
 .instructions {
-    padding: 1rem 1rem;
+   padding: 0 0 0 1rem;
+   margin-bottom: 1rem;
+}
+
+.instructions-slider {
     display: grid;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    cursor: grab;
+}
+
+.instructions-slider::-webkit-scrollbar {
+    display: none;
 }
 
 /* Instruction item */
@@ -396,6 +406,7 @@ nav ul li a.active {
     width: 80vw;
     margin-right: 15px;
     position: relative;
+    scroll-snap-align: center;
 }
 
 /* Instruction image */
@@ -420,6 +431,13 @@ nav ul li a.active {
     margin-bottom: 1rem;
 }
 
+/* Instruction seperator line */
+.instructions hr {
+    border: 0;
+    height: 1px;
+    background: var(--secondary-bg);
+}
+
 /* Instruction description */
 .instructions article p {
     line-height: 1.6;
@@ -435,6 +453,49 @@ nav ul li a.active {
     border-radius: 20px;
 }
 
+/*--------------------------------------------------------------
+# FAQ
+--------------------------------------------------------------*/
+.faq {
+    background: #F2F1F8;
+    padding: 1rem 1rem;
+}
+
+.faq-questions {
+    margin-top: 20px;
+}
+
+.faq-questions article {
+    background: #fff;
+    padding: 1rem 1rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.faq-questions article h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-right: 100px;
+}
+
+.faq-questions hr {
+    border: 0;
+    height: 1px;
+    background: var(--secondary-bg);
+}
+
+.faq-questions article p {
+    color: #585A61;
+    line-height: 1.6;
+    margin-top: .5rem;
+    font-size: 0.85rem;
+}
+
+.faq-questions article img {
+
+}
 
 /*--------------------------------------------------------------
 # Media Querys
@@ -467,10 +528,18 @@ nav ul li a.active {
     /*--------------------------------------------------------------
     # Header
     --------------------------------------------------------------*/
+    header {
+        padding: 0 5rem 0 5rem;
+    }
 
     /* Nav menu */
     nav {
         display: flex;
+    }
+
+    /* Logo */
+    .logo-wrapper {
+        left: 0;
     }
 
     /* Hamburger */
@@ -484,6 +553,7 @@ nav ul li a.active {
 
     .useful-information {
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 5rem 0 5rem;
     }
 
     .useful-information article {
@@ -493,7 +563,22 @@ nav ul li a.active {
     /*--------------------------------------------------------------
     # Instructions
     --------------------------------------------------------------*/
+    .instructions {
+        padding: 0 5rem 0 5rem;
+    }
+
     .instructions article {
         width: 20vw;
+    }
+
+    /*--------------------------------------------------------------
+    # FAQ
+    --------------------------------------------------------------*/
+    .faq {
+        padding: 1rem 5rem 1rem 5rem;
+    }
+
+    .faq-questions article {
+        margin-bottom: 20px;
     }
 }
