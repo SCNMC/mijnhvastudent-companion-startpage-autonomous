@@ -16,6 +16,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
@@ -75,9 +79,9 @@ header {
 }
 
 /*--------------------------------------------------------------
-# Header Navigation
+# Header Navigation Desktop
 --------------------------------------------------------------*/
-nav {
+header nav {
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -85,24 +89,24 @@ nav {
     display: none;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
 }
 
-nav ul li {
+header nav ul li {
     margin: 0 10px;
     transition: 200ms;
 }
 
-nav ul li a {
+header nav ul li a {
     color: var(--primary-color);
     font-size: 0.875em;
 }
 
 /* Aanmeld btn */
-nav ul li:nth-child(6) a {
+header nav ul li:nth-child(6) a {
     background: #E1DEF4;
     padding: 6px 10px;
     border-radius: 20px;
@@ -110,7 +114,7 @@ nav ul li:nth-child(6) a {
 }
 
 /* Aanmeld btn stripe */
-nav ul li:nth-child(6) a:before {
+header nav ul li:nth-child(6) a:before {
     content: '';
     display: block;
     width: 1px;
@@ -122,11 +126,39 @@ nav ul li:nth-child(6) a:before {
 }
 
 /* Header active menu item */
-nav ul li a.active {
+header nav ul li a.active {
     font-weight: bold;
     border-bottom: 1px solid #25167A;
 }
 
+/*--------------------------------------------------------------
+# Mobile navigation
+--------------------------------------------------------------*/
+.mobile-nav{
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index:1;
+    transform: translateY(-100%);
+    transition: all 0.45s;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--secondary-bg);
+}
+
+.mobile-nav.open {
+    transform: translateY(0);
+}
+
+.mobile-nav nav ul{
+    list-style: none; 
+    margin-top: 5rem;
+}
+.mobile-nav nav ul li{
+margin-bottom: 2rem;
+cursor: pointer;
+}
 
 /*--------------------------------------------------------------
 # Hamburger icon
@@ -183,14 +215,15 @@ nav ul li a.active {
     background-image: url('../assets/images/wave.png');
     height: 400px;
     background-repeat: no-repeat;
-    margin-top: 55px;
+    /* margin-top: 55px; */
     line-height: 1.6;
+    margin-top: 10px;
 }
 
 /* Banner inner */
 .banner-inner {
     position: relative;
-    top: 30px;
+    top: 65px;
 }
 
 /* Banner titles */
@@ -242,86 +275,68 @@ nav ul li a.active {
 }
 
 /*--------------------------------------------------------------
-# Tab Section
+# Information tabs Section
 --------------------------------------------------------------*/
-.info-tabs {
-    margin: 0 auto;
-    width: 55%;
-    position: relative;
-    top: -135px;
-    box-shadow: 0 10px 30px 0 rgb(138 162 173 / 30%);
-    padding: 0;
-    background: #fff;
-    border-radius: 10px;
+.information-tabs {
+    padding: 1rem 1rem;
 }
 
-.info-tabs h3 {
-    text-align: center;
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 1.2rem;
-    position: relative;
-    top: 10px;
-}
-
-.info-tabs ul {
+/* List of items */
+.information-tabs ul {
     display: flex;
-    position: relative;
-    margin-top: 30px;
-    list-style: none; 
-    justify-content: space-between;
-}
-
-.info-tabs ul li {
-    background: #E1DEF4;
-    width: 100%;
-    text-align: center;
-    border-right: 1px solid silver;
-    padding: 1rem 2rem 0 2rem;
-    border-top: 1px solid silver;
-    border-bottom: 1px solid silver;
-    cursor: pointer;
-    display: flex;
+    list-style: none;
     flex-direction: column;
 }
 
-.info-tabs ul li.active {
-    background: #fff;
-    border-bottom: none;
+.information-tabs ul li {
+    transition: 300ms;
 }
 
-.info-tabs ul li img {
-    width: 100%;
-    height: 100%;
+/* Specific item */
+.information-tabs ul li a {
+    border: 1px solid var(--secondary-bg);
+    padding: 15px;
+    display: flex;
+    cursor: pointer;
 }
 
-.info-tabs article {
-    display: grid;   
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem 0 2rem 3rem;
+/* Hover state */
+.information-tabs ul li:hover {
+    background: var(--secondary-bg);
 }
 
-.info-tabs article img {
-    width: 60%;
-    height: auto;
-}
-
-.info-tabs article div {
-    position: relative;
-    top: 25px;  
-    padding-right: 2rem;
-}
-
-.info-tabs article h4 {
+.information-tabs ul li a.active {
+    background: var(--secondary-bg);
     color: var(--primary-color);
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+    border-color: var(--secondary-bg);
 }
 
-.info-tabs article p {
-    color: #647482;
-    font-size: .93rem;
+/* Information tab content */
+.tab-content {
+    margin-top: 40px;
+}
+
+.tab-panel {
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr;
+    display: none;
+}
+
+.tab-panel.active {
+    display: grid;
+}
+
+.tab-panel p {
+    color: #585A61;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.tab-panel video {
+    width: 100%;
+    height: auto;
+    /* padding-left: 3rem; */
+    margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -330,7 +345,7 @@ nav ul li a.active {
 .useful-information {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 20px; 
+    grid-gap: 20px;
     padding: 1rem 1rem;
 }
 
@@ -350,6 +365,12 @@ nav ul li a.active {
     border: 0;
     height: 1px;
     background: var(--secondary-bg);
+}
+
+.useful-information p {
+    color: #585A61;
+    line-height: 1.6;
+    margin-top: 1rem;
 }
 
 /* Useful information links */
@@ -382,8 +403,9 @@ nav ul li a.active {
 # Instructions
 --------------------------------------------------------------*/
 .instructions {
-   padding: 0 0 0 1rem;
+   /* padding: 0 0 0 1rem; */
    margin-bottom: 1rem;
+   padding: 1rem 1rem;
 }
 
 .instructions-slider {
@@ -395,6 +417,7 @@ nav ul li a.active {
     cursor: grab;
 }
 
+/* Hide horizontal scrollbar */
 .instructions-slider::-webkit-scrollbar {
     display: none;
 }
@@ -406,7 +429,6 @@ nav ul li a.active {
     width: 80vw;
     margin-right: 15px;
     position: relative;
-    scroll-snap-align: center;
 }
 
 /* Instruction image */
@@ -461,10 +483,6 @@ nav ul li a.active {
     padding: 1rem 1rem;
 }
 
-.faq-questions {
-    margin-top: 20px;
-}
-
 .faq-questions article {
     background: #fff;
     padding: 1rem 1rem;
@@ -473,6 +491,7 @@ nav ul li a.active {
     margin-bottom: 10px;
 }
 
+/* FAQ title */
 .faq-questions article h4 {
     color: var(--primary-color);
     margin-bottom: 1rem;
@@ -480,10 +499,41 @@ nav ul li a.active {
     margin-right: 100px;
 }
 
+/* FAQ seperator */
 .faq-questions hr {
     border: 0;
     height: 1px;
     background: var(--secondary-bg);
+}
+
+/* Questions */
+.faq-questions {
+    margin-top: 20px;
+}
+
+.faq-questions article .faq-questions-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.faq-questions article ul .faq-question {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.faq-questions article ul .faq-question:before {
+    content: '';
+    background: url(../assets/images/chevron-right.svg);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+.faq-questions article ul .faq-question a {
+    color: #585A61; 
 }
 
 .faq-questions article p {
@@ -493,10 +543,44 @@ nav ul li a.active {
     font-size: 0.85rem;
 }
 
-.faq-questions article img {
-
+/* FAQ Question */
+.faq-question {
+    cursor: pointer;
 }
 
+/* Question accordion */
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-panel ul {
+    margin-left: 1.5rem;
+    list-style: none;
+}
+
+.accordion-panel ul li {
+    color: #585A61;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.accordion-panel p {
+    color: #585A61;
+    font-size: 0.9rem;
+    margin-left: 1.5rem;
+}
+
+.accordion-panel ul li:before {
+    content: '';
+    background: url(../assets/images/chevron-right.svg);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
 /*--------------------------------------------------------------
 # Media Querys
 --------------------------------------------------------------*/
@@ -506,7 +590,7 @@ nav ul li a.active {
 
     /* Two columns */
     .useful-information {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     /*--------------------------------------------------------------
@@ -522,7 +606,7 @@ nav ul li a.active {
     
     /* Three columns */
     section { 
-        padding: 0 10rem 0 10rem;
+        padding: 0 8rem 0 8rem;
     }
 
     /*--------------------------------------------------------------
@@ -533,7 +617,7 @@ nav ul li a.active {
     }
 
     /* Nav menu */
-    nav {
+    header nav {
         display: flex;
     }
 
@@ -548,12 +632,34 @@ nav ul li a.active {
     }
 
     /*--------------------------------------------------------------
+    # Information tabs
+    --------------------------------------------------------------*/
+    .information-tabs {
+        padding: 0 8rem 0 8rem;
+    }
+
+    .information-tabs ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tab-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tab-panel video {
+        padding-left: 3rem;
+        margin-top: 0;
+    }
+
+    /*--------------------------------------------------------------
     # Useful information
     --------------------------------------------------------------*/
 
     .useful-information {
+        padding: 0 8rem 0 8rem;
+        margin-top: 3rem;
         grid-template-columns: 1fr 1fr 1fr;
-        padding: 0 5rem 0 5rem;
     }
 
     .useful-information article {
@@ -564,7 +670,8 @@ nav ul li a.active {
     # Instructions
     --------------------------------------------------------------*/
     .instructions {
-        padding: 0 5rem 0 5rem;
+        padding: 0 8rem 0 8rem;
+        margin-top: 3rem;
     }
 
     .instructions article {
@@ -575,7 +682,7 @@ nav ul li a.active {
     # FAQ
     --------------------------------------------------------------*/
     .faq {
-        padding: 1rem 5rem 1rem 5rem;
+        padding: 1rem 8rem 1rem 8rem;
     }
 
     .faq-questions article {

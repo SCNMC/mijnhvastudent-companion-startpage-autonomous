@@ -31,7 +31,9 @@
     <header>
       <!-- Logo wrapper -->
       <div class="logo-wrapper">
+        
         <!-- Logo svg -->
+        <a href="#">
         <svg
           version="1.1"
           id="Layer_1"
@@ -57,25 +59,26 @@
             />
           </g>
         </svg>
+         </a>
       </div>
 
-      <!-- Navigation -->
+      <!-- Desktop Navigation -->
       <nav>
         <ul>
           <li>
-            <a href="" class="active">Home</a>
+            <a href="#" class="nav-link active">Home</a>
           </li>
           <li>
-            <a href=""> Informatie </a>
+            <a href="#information" class="nav-link"> Informatie </a>
           </li>
           <li>
-            <a href=""> Praktische tips </a>
+            <a href="#practical-tips" class="nav-link"> Praktische tips </a>
           </li>
           <li>
-            <a href=""> Instructies </a>
+            <a href="#instructions" class="nav-link"> Instructies </a>
           </li>
           <li>
-            <a href=""> Veelgestelde vragen </a>
+            <a href="#faq" class="nav-link"> Veelgestelde vragen </a>
           </li>
           <li>
             <a href=""> Aanmelden </a>
@@ -91,6 +94,31 @@
       </div>
     </header>
 
+    <!-- Mobile navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="active nav-link-mobile">Home</a>
+          </li>
+          <li>
+            <a href="#information" class="nav-link-mobile"> Informatie </a>
+          </li>
+          <li>
+            <a href="#practical-tips" class="nav-link-mobile"> Praktische tips </a>
+          </li>
+          <li>
+            <a href="#instructions" class="nav-link-mobile"> Instructies </a>
+          </li>
+          <li>
+            <a href="#faq" class="nav-link-mobile"> Veelgestelde vragen </a>
+          </li>
+          <li>
+            <a href=""> Aanmelden </a>
+          </li>
+        </ul>
+      </nav>
+   </div>
     <main>
 
       <!-- Banner Section -->
@@ -104,65 +132,115 @@
           <!-- Banner buttons -->
           <div class="banner-btns">
             <a href="#">Aanmelden</a>
-            <a href="#">Meer informatie</a>
+            <a href="#information">Lees meer</a>
           </div>
         </article>
       </section>
 
-      <!-- Tabs Section -->
-      <section class="info-tabs" style="display: none;">
-        <!-- Tabs title -->
-        <h3>Wat is er nieuw?</h3>
+      <!-- Information tabs -->
+      <section id="information" class="information-tabs">
 
-        <!-- Tabs choices -->
+        <!-- Information tabs items -->
         <ul>
-          <li class="active">
-            <img src="assets/images/undraw_science_fqhl.svg" />
-            <p>Research</p>
+          <li>
+            <a id="mijnhva-link" class="active">
+              <h4>MijnHvA voor studenten</h4>
+            </a>
           </li>
           <li>
-            <img src="assets/images/undraw_Scrum_board_re_wk7v.svg" />
-            <p>Planning</p>
+            <a id="platform-link">
+              <h4>Nieuw platform</h4>
+            </a>
           </li>
           <li>
-            <img src="assets/images/undraw_Mobile_application_mr4r.svg" />
-            <p>Production</p>
+            <a id="productteam-link">
+              <h4>Productteam MijnHvA Student</h4>
+            </a>
           </li>
           <li>
-            <img src="assets/images/undraw_mobile_testing_reah.svg" />
-            <p>Testing</p>
-          </li>
-          <li>
-            <img src="assets/images/undraw_People_search_re_5rre.svg" />
-            <p>Result</p>
+            <a id="onderwijs-link">
+              <h4>Goed Georganiseerd Onderwijs</h4>
+            </a>
           </li>
         </ul>
 
-        <article>
-          <img src="assets/images/undraw_science_fqhl.svg" />
-          <div>
-            <h4>Research & Analytics</h4>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis
-              qui ea ab quaerat voluptas quae laborum neque quia error?
-              Perferendis inventore dolore nostrum unde ullam amet beatae ut
-              aliquam libero?
-            </p>
-          </div>
-        </article>
+        <!-- Information tabs content -->
+        <div class="tab-content">
+
+          <!-- Information tab MijnHvA -->
+          <article id="tab-mijnhva" class="tab-panel active">
+            <div>
+              <h3>MijnHvA voor studenten: hét startpunt voor je studie</h3>
+              <span class="seperator"></span>
+              <p>
+                In MijnHvA voor studenten zie je als student in één oogopslag je rooster, studieresultaten, belangrijke mededelingen en nieuws. En je hebt toegang tot andere informatie en HvA-systemen, zoals Brightspace, SIS en e-mail. Na de introductie van het vernieuwde MijnHvA (op 15 november 2021) gaan we MijnHvA - samen met jullie - doorontwikkelen. Stap voor stap voegen we nieuwe functionaliteiten toe, zodat MijnHvA hét startpunt wordt van alle informatie die jij voor je studie nodig hebt.
+              </p>
+            </div>
+            <div>
+              <video src="assets/images/MijnHvA-demo.mp4" controls />
+            </div>
+          </article>
+
+          <!-- Information tab platform -->
+          <article id="tab-platform" class="tab-panel">
+            <div>
+              <h3>Nieuw platform</h3>
+              <span class="seperator"></span>
+              <p>
+                MijnHvA voor studenten is gebouwd op een nieuw platform. De software is toekomstbestendig en biedt de mogelijkheid om sneller en makkelijker dingen te verbeteren. Bovendien is het met deze software niet meer nodig om een aparte app te ontwikkelen. Je kunt MijnHvA ook op je smartphone namelijk gewoon in je browser gebruiken, met alle gemakken die een app ook biedt. Kortom, op elk apparaat dezelfde functies en beleving.
+              </p>
+              </div>
+              <div>
+                <video src="assets/images/MijnHvA-demo.mp4" controls />
+              </div>
+          </article>
+
+          <!-- Information tab product team -->
+          <article id="tab-productteam" class="tab-panel">
+            <div>
+              <h3>Productteam MijnHvA Student</h3>
+              <span class="seperator"></span>
+              <p>
+                Het vernieuwde MijnHvA voor studenten is ontwikkeld door het productteam MijnHvA student. Het onderhoud en beheer van MijnHvA voor studenten is in handen van dit team. Ook gaan zij MijnHvA de komende jaren doorontwikkelen. Help jij mee MijnHvA verbeteren? Deel je suggesties met het productteam MijnHvA student.
+              </p>
+              </div>
+              <div>
+                <video src="assets/images/MijnHvA-demo.mp4" controls />
+              </div>
+          </article>
+
+          <!-- Information tab onderwijs -->
+          <article id="tab-onderwijs" class="tab-panel">
+            <div>
+              <h3>Goed Georganiseerd Onderwijs</h3>
+              <span class="seperator"></span>
+              <p>
+                Het productteam MijnHvA student valt onder het programma Goed Georganiseerd Onderwijs. Dit programma, ook wel bekend als GGO, heeft als hoofddoel om het onderwijs zó te organiseren, dat de juiste groep studenten en docenten op de juiste tijdstippen en plaatsen bij elkaar komen om onderwijsactiviteiten te laten plaatsvinden. Onder het programma GGO vallen verschillende projecten. Meer weten? Kijk op ggo.mijnhva.nl. Je vindt daar alle informatie over het GGO en over de verschillende deelprojecten, waaronder het project MijnHvA voor studenten.
+              </p>
+              </div>
+              <div>
+                <video src="assets/images/MijnHvA-demo.mp4" controls />
+              </div>
+          </article>
+        </div>
       </section>
 
       <!-- Useful Information Section -->
-      <section class="useful-information">
+      <section id="practical-tips" class="useful-information">
         <div>
 
         <!-- Useful information title -->
-        <h3>Handige informatie / Tips</h3>
+        <h3>Praktische tips</h3>
 
         <!-- Seperator line -->
         <span class="seperator"></span>
+
+        <p>
+          Om de overgang naar het vernieuwde MijnHvA zo soepel mogelijk te laten verlopen, staan hier een aantal tips voor jou op een rijtje. Weet je bijvoorbeeld nog niet hoe je je HvA-rooster aan jouw persoonlijke agenda koppelt? Of waar je nu alle informatie vindt? Zoek niet verder, je leest het hier.
+        </p>
+
         </div>
-  
+
         <!-- Useful information students -->    
         <article>
           <h4>Studenten</h4>
@@ -267,11 +345,12 @@
             </li>
           </ul>
         </article> 
+        </section>
         </div>
       </section>
 
       <!-- Instructions Section -->
-      <section class="instructions">
+      <section id="instructions" class="instructions">
 
           <!-- Instructions Title -->
           <h3>Instructies</h3>
@@ -370,7 +449,7 @@
       </section>
 
       <!-- FAQ Section -->
-      <section class="faq">
+      <section id="faq" class="faq">
 
         <!-- FAQ Title -->
         <h3>Veelgestelde vragen</h3>
@@ -387,10 +466,126 @@
             <!-- Category title -->
             <h4>MijnHvA gebruiken / Problemen met MijnHvA</h4>
 
-            <!-- Arrow icon -->
-            <img src="assets/images/chevron-down.png" />
             <hr />
-            <p>Hieronder vind je alle veelgestelde vragen m.b.t tot het gebruik van MijnHvA</p>
+
+            <ul class="faq-questions-list">
+              <li class="faq-question">
+                <a>Inloggen in MijnHvA lukt niet. Wat kan ik doen?</a>  
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                  Probeer MijnHvA te openen in een andere browser (Edge, Chrome,
+                  Safari, Firefox, …).
+                  </li>
+                  <li>
+                    Kijk op <a href="https://services.hva.nl/">services.hva.nl</a> en
+                    check of er misschien problemen zijn met HvA-systemen.
+                  </li>
+                  <li>
+                    Controleer of je in een ander HvA-systeem wel met deze inloggegevens
+                    kunt inloggen.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Ik zie geen rooster, studieresultaten, nieuws of mededelingen. Wat kan ik doen?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Probeer het eerst in een andere browser (Firefox, Chrome, Safari). Zie
+                    je dan nog geen gegevens? Kijk dan op
+                    <a href="https://services.hva.nl/">services.hva.nl</a> en check of er
+                    problemen zijn met HvA-systemen. Zijn er geen problemen? Maak dan
+                    melding van je probleem via dit
+                    <a href="https://hva-ac.topdesk.net/tas/public/xfg/mijnhvaform">formulier.</a>
+                  </li>
+                  </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Ik zie roostergegevens of studieresultaten die niet kloppen. Hoe kan ik die laten wijzigen?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Je kunt dit doorgeven via het <a href="https://hva-ac.topdesk.net/tas/public/xfg/dsp">digitaal servicepunt.</a>
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Is er ook een app voor MijnHvA?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Nee, er is geen aparte app. Het vernieuwde MijnHvA is een zogenaamde
+                    progressive webapp. Je opent MijnHvA gewoon in je browser, waarna het
+                    eruitziet als een app. Wel kun je MijnHvA toevoegen aan het
+                    beginscherm van je telefoon. <a
+                    href="https://icthva.sharepoint.com/:v:/r/sites/over-mijnhva-voor-studenten/Gedeelde%20documenten/How-to---MijnHvA-op-je-telefoon-NL.mp4">Bekijk de video.</a> Je kunt MijnHvA dan net als een app opstarten. De huidige MijnHvApp
+                    vervalt vanaf 1 januari 2022.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Waarom kan ik de MijnHvApp niet meer gebruiken?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Het vernieuwde MijnHvA draait op een nieuw platform, waardoor een
+                    aparte app niet langer nodig is. Daarom komt de MijnHvApp vanaf 1
+                    januari te vervallen. Je kunt MijnHvA op je telefoon gewoon in
+                    je browser openen, met alle gemakken die een app ook biedt. En als je
+                    wilt kun je MijnHvA toevoegen aan het beginscherm van je
+                    telefoon. <a href="https://icthva.sharepoint.com/:v:/r/sites/over-mijnhva-voor-studenten/Gedeelde%20documenten/How-to---MijnHvA-op-je-telefoon-NL.mp4">Bekijk de video</a> Je kunt MijnHvA dan net als een
+                    app opstarten.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Ik heb in MijnHvA geen directe linkjes meer naar Microsoft 365-apps. Waar vind ik ze nu?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    De Microsoft 365-apps zijn inderdaad niet meer direct te benaderen
+                    vanuit MijnHvA. Ga in MijnHvA vanuit het menu naar 'Opleidingen'. Daar
+                    vind je de linkjes naar de Microsoft 365-apps.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Waar kan ik terecht met vragen of feedback over MijnHvA</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Heb je hulp nodig bij het gebruik van MijnHvA? Heb je een vraag die
+                    hier niet tussen staat? Of wil je feedback of verbetersuggesties
+                    doorgeven? Laat het ons weten via <a href="https://hva-ac.topdesk.net/tas/public/xfg/mijnhvaform">dit formulier.</a>Na de introductie van
+                    het vernieuwde MijnHvA (op 15 november 2021) gaan we MijnHvA - samen
+                    met jullie - doorontwikkelen. Stap voor stap voegen we nieuwe
+                    functionaliteiten toe, zodat MijnHvA hét startpunt wordt van alle
+                    informatie die jij voor je studie nodig hebt.
+                  </li>
+                </ul>
+              </div>
+            </ul>
           </article>
 
           <!-- FAQ Question Category -->
@@ -399,10 +594,79 @@
             <!-- Category title -->
             <h4>Algemene vragen over MijnHvA</h4>
 
-            <!-- Arrow icon -->
-            <img src="assets/images/chevron-down.png" />
             <hr />
-            <p>Hieronder vind je alle veelgestelde vragen m.b.t het vernieuwde MijnHvA</p>
+
+            <ul class="faq-questions-list">
+              <li class="faq-question">
+                <a>Wat is het vernieuwde MijnHvA voor studenten?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Vanaf 15 november zie je in MijnHvA in één oogopslag je rooster,
+                    studieresultaten, belangrijke mededelingen en nieuws. En je hebt
+                    toegang tot andere informatie en HvA-systemen, zoals Brightspace, SIS
+                    en e-mail. Het vernieuwde MijnHvA is gebruiksvriendelijker en het ziet
+                    er aantrekkelijker uit. Daarna gaan we samen met jullie stap voor stap
+                    nieuwe functionaliteiten toevoegen. Zo wordt MijnHvA hét startpunt
+                    voor alle informatie die je voor je studie nodig het. Heb je
+                    suggesties hoe we MijnHvA verder kunnen verbeteren? Laat het weten via
+                    het <a href="https://hva-ac.topdesk.net/tas/public/xfg/mijnhvaform">feedbackformulier</a>.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Wat is er nieuw aan het vernieuwde MijnHvA?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Het vernieuwde MijnHvA is gebruiksvriendelijker. Je vindt er sneller
+                    de informatie waarnaar je op zoek bent. En je kunt het vernieuwde
+                    MijnHvA op alle devices gebruiken. Je hebt voor je telefoon dus geen
+                   aparte app meer nodig. Ook ziet MijnHvA er aantrekkelijker uit.
+                  </li>
+                  <li>
+                    Na de introductie van het vernieuwde MijnHvA (op 15 november 2021)
+                    gaan we MijnHvA - samen met jullie - doorontwikkelen. Stap voor stap
+                    voegen we nieuwe functionaliteiten toe, zodat MijnHvA hét startpunt
+                    wordt van alle informatie die jij voor je studie nodig hebt.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Waarom is er een vernieuwd MijnHvA?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Momenteel staat alle informatie die je nodig hebt voor je studie op
+                    veel verschillende plekken. Het is soms lastig om de juiste informatie
+                    te vinden. In het vernieuwde MijnHvA vind je nu al in één oogopslag de
+                    belangrijkste informatie, zoals je rooster en studieresultaten.
+                    Daarnaast biedt het snelle toegang tot informatie en HvA-systemen die
+                    je nodig voor je studie. De komende jaren gaan we samen met jullie
+                    nieuwe functionaliteiten toevoegen, zodat alle informatie steeds meer
+                    vanaf één centrale plek te vinden is. Zo wordt MijnHvA hét startpunt
+                    voor alle informatie die je voor je studie nodig hebt.
+                  </li>
+                  <li>
+                    Ook is het vernieuwde MijnHvA gebouwd op een nieuw platform. Deze
+                    nieuwe software is toekomstbestendig en biedt de mogelijkheid om
+                    sneller en makkelijker dingen te verbeteren. Bovendien is het met deze
+                    software niet meer nodig om een aparte app te ontwikkelen. Je kunt
+                    MijnHvA op je telefoon namelijk gewoon in je browser gebruiken, met
+                    alle gemakken die een app ook biedt. En als je wilt, kun je MijnHvA
+                    toevoegen aan het beginscherm van je telefoon. Bekijk de video. Je
+                    kunt MijnHvA dan net als een app opstarten.</li>
+                </ul>
+              </div>
+            </ul>
           </article>
 
           <!-- FAQ Question Category -->
@@ -411,10 +675,104 @@
             <!-- Category title -->
             <h4>Vragen voor docenten en ondersteuners</h4>
 
-            <!-- Arrow icon -->
-            <img src="assets/images/chevron-down.png" />
             <hr />
-            <p>Hieronder vind je alle veelgestelde vragen m.b.t tot docenten en ondersteuners</p>
+
+            <ul class="faq-questions-list">
+              <li class="faq-question">
+                <a>Als ik in MijnHvA kijk, zie ik iets anders dan mijn studenten. Kan ik ook in MijnHvA voor studenten kijken?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Klopt, als je als HvA-medewerker naar MijnHvA gaat, dan kom je terecht
+                    in MijnHvA voor medewerkers. Dit is een andere omgeving dan MijnHvA
+                    voor studenten. Wil je een kijkje nemen in het vernieuwde MijnHvA voor
+                    studenten? Bekijk dan de <a href="https://icthva.sharepoint.com/:v:/r/sites/over-mijnhva-voor-studenten/Gedeelde%20documenten/MijnHvA-demo.mp4">demovideo over MijnHvA voor studenten.</a>
+                 </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Wat doe ik als een student vragen heeft over MijnHvA?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Komt een student ergens niet uit? Of wil een student feedback geven?
+                    Vraag hem/haar dan om via MijnHvA of via deze website
+                    het <a href="https://hva-ac.topdesk.net/tas/public/xfg/mijnhvaform">feedbackformulier</a>  in te vullen.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Waarom is MijnHvA zo handig voor studenten?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Op de startpagina van MijnHvA zien studenten in één oogopslag hun
+                    actuele rooster en laatste studieresultaten. Daarnaast zien ze
+                    belangrijke mededelingen en nieuwsberichten, die vanuit de opleiding
+                    of HvA-breed worden gecommuniceerd. Verder kunnen ze vanuit
+                    MijnHvA doorklikken naar andere HvA-systemen of informatiebronnen,
+                    zoals Brightspace, SIS en e-mail. Zo kunnen studenten alle informatie
+                    die studenten ze nodig hebben voor hun studie snel een gemakkelijk
+                    vinden. Tip: is een student op zoek naar informatie voor of over zijn
+                    studie? Verwijs hem/haar dan in eerste instantie naar MijnHvA.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Waarom is er een vernieuwd MijnHvA?</a>                
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Momenteel staat alle informatie die studenten voor hun studie nodig
+                    hebben op veel verschillende plekken. Het is soms lastig om de juiste
+                    informatie te vinden. In het vernieuwde MijnHvA vinden studenten nu al
+                    in één oogopslag de belangrijkste informatie, zoals het rooster en
+                    studieresultaten. Daarnaast biedt het snelle toegang tot informatie en
+                    HvA-systemen die studenten nodig hebben voor hun studie. De komende
+                    jaren gaan we samen met studenten nieuwe functionaliteiten toevoegen,
+                    zodat alle informatie steeds meer vanaf één centrale plek te vinden
+                    is. Zo wordt MijnHvA hét startpunt voor alle informatie die studenten
+                    voor hun studie nodig hebben.
+                  </li>
+                  <li>
+                    Ook is het vernieuwde MijnHvA gebouwd op een nieuw platform. Deze
+                    nieuwe software is toekomstbestendig en biedt de mogelijkheid om
+                    sneller en makkelijker dingen te verbeteren. Bovendien is het met deze
+                    software niet meer nodig om een aparte app te ontwikkelen. Studenten
+                    kunnen MijnHvA op hun telefoon namelijk gewoon in een browser
+                    gebruiken, met alle gemakken die een app ook biedt. En als studenten
+                    dat willen, dan kunnen zij MijnHvA toevoegen aan het beginscherm van
+                    hun telefoon. <a href="https://icthva.sharepoint.com/:v:/r/sites/over-mijnhva-voor-studenten/Gedeelde documenten/How-to---MijnHvA-op-je-telefoon-NL.mp4">Bekijk de video.</a>Je kunt MijnHvA dan net als een
+                    app opstarten.
+                  </li>
+                </ul>
+              </div>
+
+              <li class="faq-question">
+                <a>Komt er ook een nieuw MijnHvA voor medewerkers?</a>
+              </li>
+
+              <div class="accordion-panel">
+                <ul>
+                  <li>
+                    Op termijn gaat ook MijnHvA voor medewerkers vernieuwd worden. Het is
+                    nog niet bekend wanneer dit op de planning staat en wie het MijnHvA
+                    voor medewerkers gaat vernieuwen. 
+                  </li>
+                </ul>
+              </div>
+            </ul>
           </article>
         </div>
       </section>
