@@ -403,7 +403,6 @@ cursor: pointer;
 # Instructions
 --------------------------------------------------------------*/
 .instructions {
-   /* padding: 0 0 0 1rem; */
    margin-bottom: 1rem;
    padding: 1rem 1rem;
 }
@@ -427,7 +426,8 @@ cursor: pointer;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 5px;
     width: 80vw;
-    margin-right: 15px;
+    margin-right: 20px;
+    margin-bottom: 15px;
     position: relative;
 }
 
