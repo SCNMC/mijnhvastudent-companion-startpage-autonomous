@@ -581,6 +581,60 @@ cursor: pointer;
     position: relative;
     top: 10px;
 }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+    /* padding: 1rem 8rem 1rem 8rem; */
+    padding: 1rem 1rem;
+}
+
+/* Footer grid */
+.footer-grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-column {
+    padding: 0;
+    /* margin: 0 auto; */
+    margin-bottom: 15px;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+/* Social icons */
+.social-icons img {
+    width: 35px;
+    height: auto;
+    vertical-align: center;
+    position: relative;
+    top: 10px;  
+}
+
+/* Footer bottom bar */
+.footer-bottom-bar {
+    background: var(--secondary-bg);
+    /* padding: 0.3rem 8rem 0.3rem 8rem; */
+    text-align: center;
+    color: var(--primary-color);
+    padding: 0.3rem 0 0.3rem 0;
+}
+
 /*--------------------------------------------------------------
 # Media Querys
 --------------------------------------------------------------*/
@@ -687,5 +741,16 @@ cursor: pointer;
 
     .faq-questions article {
         margin-bottom: 20px;
+    }
+
+    /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+    footer {
+        padding: 1rem 8rem 1rem 8rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
