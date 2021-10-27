@@ -292,6 +292,11 @@ cursor: pointer;
     transition: 300ms;
 }
 
+.information-tabs ul h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
 /* Specific item */
 .information-tabs ul li a {
     border: 1px solid var(--secondary-bg);
@@ -536,13 +541,6 @@ cursor: pointer;
     color: #585A61; 
 }
 
-.faq-questions article p {
-    color: #585A61;
-    line-height: 1.6;
-    margin-top: .5rem;
-    font-size: 0.85rem;
-}
-
 /* FAQ Question */
 .faq-question {
     cursor: pointer;
@@ -568,8 +566,11 @@ cursor: pointer;
 
 .accordion-panel p {
     color: #585A61;
-    font-size: 0.9rem;
-    margin-left: 1.5rem;
+    line-height: 1.6;
+    margin-top: .5rem;
+    font-size: 0.85rem;
+    display: inline;
+    
 }
 
 .accordion-panel ul li:before {
