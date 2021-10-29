@@ -16,9 +16,16 @@
     padding: 0;
 }
 
+/* Html smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
+
+/* Selection color */
+::selection {
+    color: #fff;
+    background: var(--primary-bg);
+  }
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -503,6 +510,12 @@ cursor: pointer;
     font-weight: 600;
     margin-right: 100px;
 }
+
+#practical-tips-anchor { 
+    margin-top: -100px;        /* Size of fixed header */
+    padding-bottom: 75px; 
+    display: block; 
+  }
 
 /* FAQ seperator */
 .faq-questions hr {
