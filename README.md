@@ -1,19 +1,19 @@
-# Titel
-Mijn Companion App Landings pagina.
+# MijnHvA Companion App Welkomspagina
 
-## Beschrijving
-<!-- In deze project werken wij( Jean, Shauri en Boudewijn aan een welkomstpagina voor de  MIjn Companion App van  de HvA-studenten portaal. 🌐-->
+## 📄  Beschrijving
 
+Deze repository bevat de welkomspagina voor de MijnHvA Companion App. Dit is een welkomspagina / informatie pagina gemaakt met HTML, CSS en JavaScript. Wij (Jean, Shauri en Boudewijn) hebben deze welkomspagina gemaakt tijdens onze opleiding op de HvA: Front-End Design & Development.
 
-## Inhoudsopgave
+<img width="1437" alt="Schermafbeelding 2021-11-03 om 12 42 37" src="https://user-images.githubusercontent.com/45170095/140054118-18eb1f23-2562-4a72-96fb-b624bb9af801.png">
 
-- [Titel](#titel)
-  *Onze Doel is om een responsive landings pagina te bouwen met een.
-  * Shauri maakt de footer 
-  * Boudewijn maakt de header 
-  * Ik(Jean) heb de vragenlijst samen met Shauri aangepakt.
-  * Analyse
-  * Wij hebben gebruik gemaakt van HTML en CSS 
+## 📚 Inhoudsopgave
+
+- [Beschrijving](#beschrijving)
+- [Kenmerken](#kenmerken)
+- [Installatie](#installatie)
+- [Gebruik](#gebruik)
+- [Bronnen](#bronnen)
+- [Licentie](#licentie)
 
 
 ## Code afspraken
