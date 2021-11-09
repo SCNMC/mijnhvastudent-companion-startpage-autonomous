@@ -16,30 +16,22 @@ Deze repository bevat de welkomspagina voor de MijnHvA Companion App. Dit is een
 - [Licentie](#licentie)
 
 
-## Code afspraken
+## ✅ Kenmerken
 
-- Camelcasing toepassen
-- Comments plaatsen
-- Duidelijke class namen
-- Goede leesbaarheid hanteren
-- geen cijfers in ID
+## 🖥️ Installatie
 
-## Kenmerken
-Huisstijl van mijn HvA
-Responsive( voor mobiele versie)
-een topbar 
+1. `Clone` of `download` deze repository.
 
+2. Open het `index.html` bestand.
 
-## Installatie
+3. U ziet nu in uw browser de MijnHvA welkomspagina!
 
-## Gebruik
+## 🖱️ Gebruik
 
-## Bronnen
-https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
-www.ns.nl 
+## 📰 Bronnen
 https://www.hotelschool.nl/
+<br>
 https://www.hva.nl/
-
 
 ## Licentie
 
